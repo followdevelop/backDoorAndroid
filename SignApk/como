@@ -1,0 +1,14 @@
+java –jar signapk.jar certificate.pem key.pk8 <nuestra aplicacion>.apk <nuestra aplicacion firmada>.apk
+
+FROM anapsix/alpine-java
+MAINTAINER myNAME 
+COPY testprj-1.0-SNAPSHOT.jar /home/testprj-1.0-SNAPSHOT.jar
+RUN java -jar /home/testprj-1.0-SNAPSHOT.j
+
+
+docker run -it --rm anapsix/alpine-java java -version
+
+docker run -it --rm anapsix/alpine-java java –jar signapk.jar certificate.pem key.pk8 mgt-1234-1-77.apk mgt-1234-1-77firmado.apk
+
+keytool -genkey -v -keystore myapps.keystore -alias myapp_name -keyalg RSA -keysize 2048 -validity 10000
+

